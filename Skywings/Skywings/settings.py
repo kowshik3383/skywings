@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-9(s4cj10oj0ud3pg-va=9t&mv8#=jc_5mgxf0@m2#m1-me4-ui
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['*.vercel.app', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -82,14 +82,11 @@ WSGI_APPLICATION = 'Skywings.wsgi.application'
 # }
 DATABASES = {
     'default': {
-        'ENGINE': 'django',
-        'NAME': 'kowshikvalipireddy',
-        'CLIENT': {
-            'host': 'mongodb+srv://kowshikvalipireddy:A85lb18KZByGMAmz@cluster0.x1ffylr.mongodb.net/',
-            'authMechanism': 'SCRAM-SHA-1',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
